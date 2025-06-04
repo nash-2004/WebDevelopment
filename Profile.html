@@ -1,0 +1,318 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Portfolio - Biagtan, Nathaniel</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+   integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+   crossorigin=""/>
+   
+   <link rel="stylesheet" href="webdevTemplate/css/bootstrap.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="webdevTemplate/js/bootstrap.min.js"></script>
+    <script src="webdevTemplate/js/popper.min.js"></script>	
+    <script src="webdevTemplate/js/bootstrap.js" ></script>
+    <link rel="stylesheet" type="text/css" href="mystyles.css">
+  
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+   integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+   crossorigin=""></script>
+    
+    <style>
+        @font-face {
+            font-family: "Skranji";
+            src: url(webdevTemplate/fonts/Skranji-Bold.ttf);
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .Skranji{
+            font-family: "Skranji";
+        }
+
+        @font-face {
+            font-family: "Secular-One";
+            src: url(webdevTemplate/fonts/Secular_One/SecularOne-Regular.ttf);
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .Secular-One{
+            font-family: "Secular-One";
+        }
+
+        @font-face {
+            font-family: "Mirza";
+            src: url(webdevTemplate/fonts/Mirza/Mirza-Regular.ttf);
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        .Mirza{
+            font-family: "Mirza";
+        }
+
+        @font-face {
+            font-family: "Passero-One";
+            src: url(webdevTemplate/fonts/Passero_One/PasseroOne-Regular.ttf);
+            font-weight: normal;
+            font-style: normal;
+        }
+
+         .Passero-One{
+            font-family: "Passero-One";
+        }
+
+        body {
+            background-color: #171717;
+            background-image: url(bg3\ copy.png);
+            background-size: cover; 
+        }
+
+        .bg-custom{
+          background-color: rgba(42, 41, 41, 0.5);
+          border-radius: 20px;
+        }
+
+       .bg-custom2{
+        background-color: #171717;
+       }
+
+        .bg-custom3{
+        background-color: #7B0606;
+        border-radius: 24px;
+        height: 40px;
+        width: 220px;
+        font-size: 36px;
+       }
+
+       #map {
+        height: 500px;
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        margin: 20px 0;
+      }
+
+      @media (max-width: 768px) {
+           .container-fluid.w-50 {
+               width: 90% !important;
+           }
+           .jumbotron.bg-custom {
+               padding: 2rem !important;
+           }
+           img.rounded-circle {
+               float: none !important;
+               display: block;
+               margin: 0 auto 1rem auto !important;
+           }
+           #map {
+             height: 300px;
+           }
+       }
+    </style>
+    
+    <script type="text/javascript">
+     $(document).ready(function() {
+        
+       
+     });
+    </script>		
+  </head>
+  <body>
+
+     <nav class="navbar navbar-expand-md bg-custom navbar-dark">
+      <div class="container-fluid">
+        <h3 class="navbar-brand Skranji">
+        <a class="navbar-brand Skranji" href="#" style="font-size: 30px;">N<span style="color: #FF0000;">B</span></a>
+        </h3>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+       
+        <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item mx-4">     
+              <a class="nav-link Secular-One" href="HomePage.html" style="font-size: 25px;">Home</a>      
+            </li>
+
+            <li class="nav-item mx-4">
+              <a class="nav-link Secular-One" href="Profile.html" style="font-size: 25px;">Profile</a> 
+            </li>
+
+            <li class="nav-item mx-4">   
+              <a class="nav-link Secular-One" href="Contacts.html" style="font-size: 25px;">Contacts</a>           
+            </li>
+
+            <li class="nav-item mx-4">   
+              <a class="nav-link Secular-One" href="summer.html" style="font-size: 25px;">Summer</a>           
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <br>
+    <br>
+    <div class="d-flex justify-content-center my-2">
+      <h2 class="Secular-One bg-custom3 text-light text-center m-0">Profile</h2>
+    </div>
+    <div class="my-4 container-fluid w-50">
+      <div class="jumbotron bg-custom p-5 my-3">
+        <img src="nut.png" class="rounded-circle border float-left mr-4" width="310" height="323" style="border-color: #000;" alt="Profile Picture">
+        <br>
+        <h3 class="text-light Secular-One">Name: Nathaniel Biagtan</h3>
+        <br>
+        <h3 class="text-light Secular-One">Age: 20 years old</h3>
+        <br>
+        <h3 class="text-light Secular-One">Birthdate: 2004-08-15</h3>
+        <br>
+        <h3 class="text-light Secular-One">Course: Computer Science</h3>
+        <br>
+        <h3 class="text-light Secular-One">Religion: Roman Catholic</h3>
+      </div>
+    </div> 
+
+    <br>
+
+    <div class="d-flex justify-content-center my-2">
+      <h2 class="Secular-One bg-custom3 text-light text-center m-0">Address</h2>
+    </div>
+    
+    <div class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div id="map"></div>
+          <script>
+             const map = L.map('map').setView([16.0788, 120.4473], 13);
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([16.0788, 120.4473]).addTo(map)
+          .bindPopup("<b>Home</b><br>San Jacinto, Pangasinan")
+          .openPopup();
+          </script>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-center my-2">
+      <h2 class="Secular-One bg-custom3 text-light text-center m-0">Education</h2>
+    </div>
+
+    <div class="my-4 container-fluid bg-custom w-50 p-5 text-center">
+        <div class="row">
+            <div class="col-sm-3">
+                <p class="text-light Secular-One">Primary School</p>
+                <h4 class="text-light Secular-One">Golden Angels Educational Ins.</h4>
+                <h4 class="text-light Secular-One">2009 - 2017</h4>
+                <img src="GAEI.jpg" width="130" height="120" style="border-radius: 15px;" alt="Golden Angels Educational Ins.">
+            </div>
+           
+            <div class="col-sm-3">
+                <p class="text-light Secular-One">Secondary School - JHS</p>
+                <h3 class="text-light Secular-One">Clarice Angel School</h3>
+                <h4 class="text-light Secular-One">2017 - 2021</h4>
+                <img src="CAS.jpg" width="130" height="110" style="border-radius: 15px;" alt="Clarice Angel School">
+            </div>
+
+            <div class="col-sm-3">
+                <p class="text-light Secular-One">Secondary School - SHS</p>
+                <h3 class="text-light Secular-One">University of Luzon</h3>
+                <h4 class="text-light Secular-One">2021 - 2023</h4>
+                <img src="ul.jpg" width="130" height="110" style="border-radius: 15px;" alt="University of Luzon">
+            </div>
+           
+            <div class="col-sm-3">
+                <p class="text-light Secular-One">Tertiary School</p>
+                <h3 class="text-light Secular-One">University of Luzon</h3>
+                <h4 class="text-light Secular-One">2023 - Present</h4>
+                <img src="ul.jpg" width="130" height="110" style="border-radius: 15px;" alt="University of Luzon">
+            </div>
+        </div>
+    </div> 
+
+    <br>
+    <div class="d-flex justify-content-center my-2">
+      <h2 class="Secular-One bg-custom3 text-light text-center m-0">Skills</h2>
+    </div>
+ 
+    <div class="d-flex justify-content-center my-4">
+      <div id="slider" class="carousel slide w-50" data-ride="carousel">
+        <ul class="carousel-indicators">
+          <li data-target="#slider" data-slide-to="0" class="active"></li>
+          <li data-target="#slider" data-slide-to="1"></li>
+          <li data-target="#slider" data-slide-to="2"></li>
+        </ul>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="bg1.jpg" alt="Programming" class="d-block w-100 img-fluid" style="height: 300px; object-fit: cover; opacity: .5;">
+            <div class="carousel-caption">
+              <h3 class="text-light Secular-One">Programming</h3>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="web.jpg" alt="Web Development" class="d-block w-100 img-fluid" style="height: 300px; object-fit: cover; opacity: .5;">
+            <div class="carousel-caption">
+              <h3 class="text-light Secular-One">Web Development</h3>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="ps.jpg" alt="Graphic Designing" class="d-block w-100 img-fluid" style="height: 300px; object-fit: cover; opacity: .2;">
+            <div class="carousel-caption">
+              <h3 class="text-light Secular-One">Graphic Designing</h3>
+            </div>
+          </div>
+        </div>
+
+        <a class="carousel-control-prev" href="#slider" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#slider" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+    </div>
+
+    <br>
+    <div class="d-flex justify-content-center my-2">
+      <h2 class="Secular-One bg-custom3 text-light text-center m-0">Projects</h2>
+    </div>
+
+    <div class="my-4 container-fluid bg-custom w-50 p-5 text-center">
+        <div class="row justify-content-center">
+            <div class="col-sm-6">
+                <div class="card border custom-container m-3" style="width: 350px; background-color: #171717;">
+                    <div class="card-body">
+                        <img src="StriveLogo.png" class="card-img-top" alt="STRIVE Project" style="height: 250px; object-fit: cover;">
+                    </div>
+                    <div class="card-footer text-light border Mirza" style="background-color: #1f1f1f;">
+                        <h3 class="text-light Mirza"><span class="text-light Passero-One">S</span>TRIVE</h3>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="col-sm-6">
+                <div class="card border custom-container m-3" style="width: 350px; background-color: #171717;">
+                    <div class="card-body">
+                        <img src="rec.jpg" class="card-img-top" alt="Reco-Play Project" style="height: 250px; object-fit: cover;">
+                    </div>
+                    <div class="card-footer text-light border Mirza" style="background-color: #1f1f1f;">
+                        <h3 class="text-light Mirza">Reco-Play</h3>
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </div>
+    
+  </body>
+</html>
